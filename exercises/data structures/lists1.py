@@ -4,18 +4,18 @@ print()
 
 
 def add(dz):
-    tp = 0
+    s = 0
     for i in range(0,len(dz)):
-        tp += dz[i]
+        s += dz[i]
     
-    return tp
+    return s
 
 def mul(dz):
-    çr = 1
+    m = 1
     for i in range(0,len(dz)):
-        çr *= dz[i]
+        m *= dz[i]
     
-    return çr
+    return m
 
 def my_max(dz):
     return max(dz)
@@ -87,48 +87,48 @@ def append_list_to_end(dz1,dz2):
     return dz3
 
 def frequency(dz,s):
-    sayac = 0
+    counter = 0
     for i in range(0,len(dz)):
         if str(s) == str(dz[i]):
-            sayac += 1
+            counter += 1
             
-    return sayac
+    return counter
 
-def Dizelgeiçerme(dz):
+def has_list(dz):
     for i in range(0,len(dz)):
         if type(dz[i]) is list:
             return True
         
     return False
 
-def sabitdizelgemi(dz):
-    sayac = 0
+def has_the_same_term(dz):
+    counter = 0
     for i in range(0,len(dz)-1):
         if str(dz[i]) == str(dz[i+1]):
-            sayac = sayac + 1 
+            counter = counter + 1 
     
-    if sayac == len(dz)-1:
+    if counter == len(dz)-1:
         return True
     else:
         return False
 
-def enbdizelge(dz):
-    indeks = 0
-    toplam = 0
-    enb = -99999999999999999
+def max_of_list(dz):
+    index = 0
+    my_sum = 0
+    mmax = -99999999999999999
     for i in range(0,len(dz)):
         for j in range(0,len(dz[i])):
-            toplam += dz[i][j]
+            my_sum += dz[i][j]
             
-        if toplam>enb:
-            enb = toplam
-            toplam = 0
-            indeks = i
+        if my_sum>mmax:
+            mmax = my_sum
+            my_sum = 0
+            index = i
             
-    return dz[indeks]
+    return dz[index]
          
 
-def büyükolanlar(dz,c):
+def get_bigger_than(dz,c):
     dz2 = list()
     for i in range(0,len(dz)):
         if int(dz[i])>c:
@@ -136,7 +136,7 @@ def büyükolanlar(dz,c):
     
     return dz2
     
-def düzle(dz):
+def flatten(dz):
     dz2 = list()
     for i in range(0,len(dz)):
         if (type(dz[i]) is str) or (type(dz[i]) is int):

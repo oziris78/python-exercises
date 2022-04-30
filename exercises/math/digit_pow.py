@@ -2,26 +2,26 @@
 
 from math import pow
 
-def basamakUssuEsit(limit, h, n):
-    basamakToplam = int(0)
-    dzl = list()
+def digit_pow(limit, h, n):
+    digit_sum = int(0)
+    l = list()
     for i in range(limit, limit+h+1):
         i = str(i)
     
         for j in i:
             j = int(j)
-            basamakToplam += pow(j, n)
+            digit_sum += pow(j, n)
             
-        if(int(i) == basamakToplam):
-            dzl.append(i)
+        if(int(i) == digit_sum):
+            l.append(i)
             
-        basamakToplam = 0
+        digit_sum = 0
     
-    return dzl
+    return l
 
 
-with open("usEsitMi.txt", "a+") as dsy:
+with open("digit_pow.txt", "a+") as f:
     for i in range(1,11):
-        dsy.write(f"{i}: " + str(basamakUssuEsit(1000000,1000000,i)) + "\n")
+        f.write(f"{i}: " + str(digit_pow(1000000,1000000,i)) + "\n")
    
     
