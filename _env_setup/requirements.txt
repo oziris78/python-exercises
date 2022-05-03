@@ -16,3 +16,4 @@ pyinstaller
 pytube
 instagramy
 instaloader
+PySimpleGUI
