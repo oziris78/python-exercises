@@ -13,8 +13,10 @@ numpy
 matplotlib
 pillow
 pyinstaller
+instagrapi
 pytube
 instagramy
 instaloader
 PySimpleGUI
 easygui
+gibberish

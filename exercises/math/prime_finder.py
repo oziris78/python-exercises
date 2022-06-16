@@ -2,7 +2,6 @@
 
 import math
 
-
 def is_prime(n):
     if(n%2==0):
         print(f"{n} is NOT a prime number")
